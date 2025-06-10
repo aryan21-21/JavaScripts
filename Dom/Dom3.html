@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Add Name</title>
+</head>
+<body>
+    <ul class="language">
+        <li class="il">Java Scrpits</li>
+
+    </ul>
+</body>
+<script>
+    //Add Language
+    function addLanguage(langName){
+        const lan =document.createElement("li");
+        lan.style.color = "red";
+        lan.style.padding = "10px";
+        lan.style.backgroundColor = "blue";
+        lan.style.borderRadius = "50px";
+        lan.innerHTML = langName;
+        document.querySelector(".language").appendChild(lan);
+    }
+    addLanguage("Python");
+    addLanguage("Java");
+    addLanguage("PHP");
+    
+
+
+    //Edit
+    const chang = document.querySelector("li:nth-child(2)");
+    const newli = document.createElement("li");
+
+    newli.textContent = "DBMS";
+    chang.replaceWith(newli)
+
+    // remove
+    document.querySelector("li:last-child").remove();
+    //addLanguage("HTMl");
+</script>
+</html>

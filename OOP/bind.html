@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+<script>
+    class button{
+        constructor(){
+            this.server = "Localhost";
+            this.serverId = "1234560";
+
+            document.querySelector("button").addEventListener("click",this.clikeButton.bind(this))
+
+        }
+        clikeButton(){
+            console.log("Button Cliked");
+            console.log(this.server);
+            
+        }
+    }
+    new button();
+</script>
+</html>
